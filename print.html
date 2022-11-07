@@ -36,6 +36,8 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -270,7 +272,7 @@
 <h2 id="Δευτέρα-31102022"><a class="header" href="#Δευτέρα-31102022">Δευτέρα 31.10.2022</a></h2>
 <ul>
 <li>Το στοχαστικό ολοκλήρωμα κατά Ito</li>
-<li>Υπολογισμός του ολοκληρώματος $$\int_0^T W_t dW_t$$</li>
+<li>Υπολογισμός του ολοκληρώματος \(\int_0^T W_t dW_t\)</li>
 </ul>
 <p><a href="./lectures/6th_annotated.pdf">6th_annotated.pdf</a></p>
 <h2 id="Παρασκευή-4112022"><a class="header" href="#Παρασκευή-4112022">Παρασκευή 4.11.2022</a></h2>
@@ -282,7 +284,7 @@
 <h2 id="Δευτέρα-7112022"><a class="header" href="#Δευτέρα-7112022">Δευτέρα 7.11.2022</a></h2>
 <ul>
 <li>Ito's formula για την κίνηση Brown</li>
-<li>Εφαρμογή για τον εναλλακτικό υπολογισμό (βλέπε lecture5) του $$\int_0^T W_t dW_t$$</li>
+<li>Εφαρμογή για τον εναλλακτικό υπολογισμό (βλέπε lecture5) \(\int_0^T W_t dW_t\)</li>
 </ul>
 <p><a href="./lectures/8th_annotated.pdf">8th_annotated.pdf</a></p>
 <hr><p align=center>©2022 <a href="https://kesmarag.gitlab.io">Costas Smaragdakis</a></p>
@@ -314,7 +316,9 @@
         <!-- Custom JS scripts -->
         <script type="text/javascript">
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
     </body>
